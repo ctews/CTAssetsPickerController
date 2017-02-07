@@ -209,13 +209,13 @@
             
             if (!self.picker.showsEmptyAlbums)
             {
-                PHFetchOptions *options = [PHFetchOptions new];
+                /*PHFetchOptions *options = [PHFetchOptions new];
                 options.predicate = self.picker.assetsFetchOptions.predicate;
                 options.fetchLimit = 1;
                 
-                NSInteger count = [assetCollection ctassetPikcerCountOfAssetsFetchedWithOptions:options];
+                NSInteger count = [assetCollection ctassetPikcerCountOfAssetsFetchedWithOptions:options];*/
                 
-                showsAssetCollection = (count > 0);
+                showsAssetCollection = (assetCollection.estimatedAssetCount > 0);
             }
             
             if (showsAssetCollection)
