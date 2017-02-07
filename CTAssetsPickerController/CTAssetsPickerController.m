@@ -134,7 +134,7 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
       //@(PHAssetCollectionSubtypeSmartAlbumSlomoVideos),
       //@(PHAssetCollectionSubtypeSmartAlbumTimelapses),
       @(PHAssetCollectionSubtypeSmartAlbumBursts),
-      @(PHAssetCollectionSubtypeSmartAlbumAllHidden),
+      //@(PHAssetCollectionSubtypeSmartAlbumAllHidden),
       @(PHAssetCollectionSubtypeSmartAlbumGeneric),
       @(PHAssetCollectionSubtypeAlbumRegular),
       @(PHAssetCollectionSubtypeAlbumSyncedAlbum),
