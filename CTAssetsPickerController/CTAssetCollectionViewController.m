@@ -191,10 +191,14 @@
     }
     
     self.fetchResults = [NSMutableArray arrayWithArray:fetchResults];
-    
-    [self updateAssetCollections];
-    [self reloadData];
-    [self showDefaultAssetCollection];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self updateAssetCollections];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [self reloadData];
+            [self showDefaultAssetCollection];
+        });
+    });
 }
 
 - (void)updateAssetCollections
